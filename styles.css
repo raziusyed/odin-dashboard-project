@@ -57,3 +57,18 @@ h5,
 h6 {
     text-wrap: balance;
 }
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+body > div {
+    border: solid;
+}
+
+.sidebar {
+    grid-row: 1 / 3;
+}
