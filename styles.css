@@ -65,10 +65,12 @@ body {
     grid-template-rows: 1fr 5fr;
 }
 
-body > div {
-    border: solid;
+body > div, .sidebar * {
+    border: 1px solid;
 }
 
 .sidebar {
     grid-row: 1 / 3;
+    display: grid;
+    grid-template-rows: 1fr 5fr 5fr;
 }
