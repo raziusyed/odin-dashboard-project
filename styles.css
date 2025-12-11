@@ -65,7 +65,7 @@ body {
     grid-template-rows: 1fr 5fr;
 }
 
-body > div, .sidebar * {
+body > div, .sidebar *, .header div {
     border: 1px solid;
 }
 
@@ -73,4 +73,18 @@ body > div, .sidebar * {
     grid-row: 1 / 3;
     display: grid;
     grid-template-rows: 1fr 5fr 5fr;
+}
+
+.header {
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+    grid-template-columns: 3fr 2fr;
+}
+
+.top-left, .bottom-left {
+    grid-column: 1 / 2;
+}
+
+.top-right, .bottom-right {
+    grid-column: 2 / 3;
 }
