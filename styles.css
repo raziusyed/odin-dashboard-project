@@ -65,7 +65,7 @@ body {
     grid-template-rows: 1fr 5fr;
 }
 
-body > div, .sidebar *, .header div {
+body > div, .sidebar *, .header div, .main div, .main-grid div {
     border: 1px solid;
 }
 
@@ -87,4 +87,37 @@ body > div, .sidebar *, .header div {
 
 .top-right, .bottom-right {
     grid-column: 2 / 3;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-grid {
+    height: 80%;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.project-title {
+    grid-column: 1 / 2;
+}
+
+.announcements-title {
+    grid-column: 2 / 3;
+}
+
+.project-cards {
+    grid-row: 2 / 11;
+}
+
+.announcements-grid {
+    grid-row: 2 / 6;
+}
+
+.trending-grid {
+    grid-row: 7 / 11;
 }
