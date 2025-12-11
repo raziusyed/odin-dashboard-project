@@ -91,7 +91,8 @@ h6 {
 
 :root {
     --sidebar-background-color: #3492d5;
-    --search-background-color: #e2e8f1;
+    --main-background-color: #e2e8f1;
+    --card-accent-color: #f1b429;
 }
 
 body {
@@ -183,11 +184,35 @@ body>div,
     align-items: center;
 }
 
-svg {
+.sidebar svg {
     fill: white;
 }
 
-.nav-item svg {
+.nav-item svg, .top-left svg {
     width: 25px;
     height: 25px;
+}
+
+.header {
+    padding: 0px 48px;
+}
+
+.top-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-bar {
+    background-color: var(--main-background-color);
+    border: none;
+    flex: 1;
+    border-radius: 999px;
+    padding: 0px 12px;
+    height: 30px;
+    font-weight: 400;
+}
+
+.search-bar:focus {
+    outline: none;
 }
