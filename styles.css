@@ -51,8 +51,6 @@ body {
 img,
 picture,
 video,
-
-
 canvas,
 svg {
     display: block;
@@ -104,7 +102,7 @@ body {
 
 body>div,
 /* .sidebar *, */
-.header div,
+/* .header div, */
 .main div,
 .main-grid div {
     border: 1px solid;
@@ -188,16 +186,20 @@ body>div,
     fill: white;
 }
 
-.nav-item svg, .top-left svg {
+.nav-item svg,
+.top-left svg,
+.top-right svg {
     width: 25px;
     height: 25px;
 }
 
 .header {
-    padding: 0px 48px;
+    padding: 0px 64px;
 }
 
-.top-left {
+.top-left,
+.top-right,
+.bottom-right {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -215,4 +217,63 @@ body>div,
 
 .search-bar:focus {
     outline: none;
+}
+
+.top-right {
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+.profile-pic {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: url(images/user-profile.svg);
+    background-size: 170%;
+    background-position: 50% 15%;
+    background-repeat: no-repeat;
+    background-color: #facc15;
+}
+
+.top-right p {
+    font-weight: 700;
+}
+
+.bottom-left {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 6fr;
+    font-weight: 700;
+}
+
+.bottom-left .profile-pic {
+    grid-row: 1 / 3;
+    height: 75px;
+    width: 75px;
+    align-self: center;
+}
+
+.bottom-left .greeting {
+    align-self: flex-end;
+    font-size: 0.75rem;
+}
+
+.bottom-left .handle {
+    font-size: 1.33rem;
+}
+
+.bottom-right {
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+.bottom-right button {
+    flex-basis: 96px;
+    background-color: var(--sidebar-background-color);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 8px 0px;
+    font-weight: 700;
 }
