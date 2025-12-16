@@ -91,7 +91,8 @@ h6 {
     --sidebar-background-color: #3492d5;
     --main-background-color: #e2e8f1;
     --card-accent-color: #f1b429;
-    --project-desc-text: #636363;
+    --desc-text: #636363;
+    --announcement-separator: #d2d2d2;
 }
 
 body {
@@ -106,7 +107,8 @@ body {
 /* .header div, */
 .main>div,
 .main-grid>div,
-.project-card>* {
+.project-card>*,
+.trending-grid>* {
     border: 1px solid;
 }
 
@@ -143,7 +145,7 @@ body {
 
 .main-grid {
     display: grid;
-    grid-template-columns: 5fr 2fr;
+    grid-template-columns: 11fr 4fr;
     grid-template-rows: repeat(20, 1fr);
     margin: 36px 24px 0px 16px;
     gap: 0px 16px;
@@ -178,7 +180,7 @@ body {
 .project-desc {
     flex: 1;
     line-height: 1.2;
-    color: var(--project-desc-text);
+    color: var(--desc-text);
 }
 
 .project-tags {
@@ -199,14 +201,45 @@ body {
 .trending-title {
     font-size: 1.1rem;
     font-weight: 700;
+    align-self: flex-end;
 }
 
 .announcements-grid {
-    grid-row: 2 / 11;
+    grid-row: 2 / 10;
+    display: grid;
+    background-color: white;
+    border-radius: 8px;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 24px;
+}
+
+.announcements-grid > .announcement:not(:last-child) {
+    border-bottom: 1px solid var(--announcement-separator);
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+}
+
+.announcement-subtitle {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.announcement-desc {
+    font-size: 0.7rem;
+    color: var(--desc-text);
+    line-height: 1;
+}
+
+.trending-title {
+    grid-row: 11 / 12;
 }
 
 .trending-grid {
     grid-row: 12 / 21;
+    display: grid;
+    background-color: white;
+    border-radius: 8px;
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .dashboard-header,
