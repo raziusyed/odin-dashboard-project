@@ -91,20 +91,22 @@ h6 {
     --sidebar-background-color: #3492d5;
     --main-background-color: #e2e8f1;
     --card-accent-color: #f1b429;
+    --project-desc-text: #636363;
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
 }
 
-body>div,
+/* body>div, */
 /* .sidebar *, */
 /* .header div, */
-.main div,
-.main-grid div {
+.main>div,
+.main-grid>div,
+.project-card>* {
     border: 1px solid;
 }
 
@@ -135,34 +137,76 @@ body>div,
 .main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    background-color: var(--main-background-color);
 }
 
 .main-grid {
-    height: 80%;
     display: grid;
     grid-template-columns: 5fr 2fr;
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    margin: 36px 24px 0px 16px;
+    gap: 0px 16px;
 }
 
 .project-title {
     grid-column: 1 / 2;
 }
 
-.announcements-title {
+.announcement-title {
     grid-column: 2 / 3;
 }
 
 .project-cards {
-    grid-row: 2 / 11;
+    grid-row: 2 / 21;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.project-card {
+    border-radius: 8px;
+    padding: 28px 8px 28px 20px;
+    font-size: 0.9rem;
+    background-color: white;
+    border-left: 8px solid var(--card-accent-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-desc {
+    flex: 1;
+    line-height: 1.2;
+    color: var(--project-desc-text);
+}
+
+.project-tags {
+    margin-top: 8px;
+    margin-right: 16px;
+    align-self: flex-end;
+    display: flex;
+    gap: 24px;
+}
+
+.project-tags svg {
+    width: auto;
+    height: 22px;
+}
+
+.project-title,
+.announcement-title,
+.trending-title {
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
 .announcements-grid {
-    grid-row: 2 / 6;
+    grid-row: 2 / 11;
 }
 
 .trending-grid {
-    grid-row: 7 / 11;
+    grid-row: 12 / 21;
 }
 
 .dashboard-header,
