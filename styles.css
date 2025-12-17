@@ -93,6 +93,10 @@ h6 {
     --card-accent-color: #f1b429;
     --desc-text: #636363;
     --announcement-separator: #d2d2d2;
+    --trending-pic-1: #e0f2fe;
+    --trending-pic-3: #a3a3a3;
+    --trending-pic-4: #f8a4af;
+    --user-profile-bg: #facc15;
 }
 
 body {
@@ -105,12 +109,12 @@ body {
 /* body>div, */
 /* .sidebar *, */
 /* .header div, */
-.main>div,
+/* .main>div,
 .main-grid>div,
-.project-card>*,
-.trending-grid>* {
+.project-card>*, */
+/* .trending-grid * {
     border: 1px solid;
-}
+} */
 
 .sidebar {
     grid-row: 1 / 3;
@@ -202,6 +206,7 @@ body {
     font-size: 1.1rem;
     font-weight: 700;
     align-self: flex-end;
+    line-height: 2;
 }
 
 .announcements-grid {
@@ -240,6 +245,57 @@ body {
     background-color: white;
     border-radius: 8px;
     grid-template-rows: repeat(4, 1fr);
+    padding: 20px 24px;
+}
+
+.trending {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    line-height: 1.3;
+    font-size: 0.8rem;
+}
+
+.trending-pic {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    grid-row: 1 / 3;
+    align-self: center;
+}
+
+.trending-pic img {
+    width: 220%;
+    height: 220%;
+    object-fit: cover;
+    transform: translateY(-10px);
+}
+
+.trending-pic.pic-1 {
+    background-color: var(--trending-pic-1);
+}
+
+.trending-pic.pic-2 {
+    background-color: var(--user-profile-bg);
+}
+
+.trending-pic.pic-3 {
+    background-color: var(--trending-pic-3);
+}
+
+.trending-pic.pic-4 {
+    background-color: var(--trending-pic-4);
+}
+
+.trending-handle {
+    align-self: flex-end;
+    font-weight: 500;
+}
+
+.trending-tagline {
+    align-self: flex-start;
+    color: var(--desc-text);
 }
 
 .dashboard-header,
@@ -299,6 +355,7 @@ body {
 .top-right {
     justify-content: flex-end;
     gap: 24px;
+    margin-left: 24px;
 }
 
 .profile-pic {
@@ -310,7 +367,7 @@ body {
     background-size: 170%;
     background-position: 50% 15%;
     background-repeat: no-repeat;
-    background-color: #facc15;
+    background-color: var(--user-profile-bg);
 }
 
 .top-right p {
@@ -352,6 +409,6 @@ body {
     color: white;
     border: none;
     border-radius: 999px;
-    padding: 8px 0px;
+    padding: 8px 16px;
     font-weight: 700;
 }
