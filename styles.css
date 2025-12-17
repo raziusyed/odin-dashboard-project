@@ -145,13 +145,14 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     background-color: var(--main-background-color);
+    box-shadow: inset 0px 8px 8px -8px hsl(0 0% 0% / 0.25);
 }
 
 .main-grid {
     display: grid;
     grid-template-columns: 11fr 4fr;
     grid-template-rows: repeat(20, 1fr);
-    margin: 36px 24px 0px 16px;
+    margin: 24px 24px 0px 16px;
     gap: 0px 16px;
 }
 
@@ -233,6 +234,7 @@ body {
     font-size: 0.7rem;
     color: var(--desc-text);
     line-height: 1;
+    font-weight: 400;
 }
 
 .trending-title {
