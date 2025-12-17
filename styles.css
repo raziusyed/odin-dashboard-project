@@ -89,7 +89,7 @@ h6 {
 
 :root {
     --sidebar-background-color: #3492d5;
-    --main-background-color: #e2e8f1;
+    --main-background-color: #e3e9f2;
     --card-accent-color: #f1b429;
     --desc-text: #636363;
     --announcement-separator: #d2d2d2;
@@ -180,6 +180,7 @@ body {
     border-left: 8px solid var(--card-accent-color);
     display: flex;
     flex-direction: column;
+    box-shadow: 3px 6px 6px -6px hsl(0 0% 0% / 0.5);
 }
 
 .project-desc {
@@ -217,9 +218,10 @@ body {
     border-radius: 8px;
     grid-template-rows: repeat(3, 1fr);
     padding: 24px;
+    box-shadow: 3px 6px 6px -6px hsl(0 0% 0% / 0.5);
 }
 
-.announcements-grid > .announcement:not(:last-child) {
+.announcements-grid>.announcement:not(:last-child) {
     border-bottom: 1px solid var(--announcement-separator);
     margin-bottom: 12px;
     padding-bottom: 12px;
@@ -248,6 +250,7 @@ body {
     border-radius: 8px;
     grid-template-rows: repeat(4, 1fr);
     padding: 20px 24px;
+    box-shadow: 3px 6px 6px -6px hsl(0 0% 0% / 0.5);
 }
 
 .trending {
